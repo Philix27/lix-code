@@ -7,11 +7,12 @@ import { createHighlighter } from 'shiki';
 import remarkToc from 'remark-toc';
 // import remarkUbwrapImages from 'remark-unwrap-images';
 import rehypeSlug from 'rehype-slug';
+import remarkEmbedder from '@remark-embedder/core';
 
 const theme = 'github-dark';
 const highlighter = await createHighlighter({
 	themes: [theme],
-	langs: ['javascript', 'typescript']
+	langs: ['javascript', 'typescript', "rust", "sh", "go", "solidity"]
 });
 
 /** @type {import('mdsvex').MdsvexOptions} */
@@ -23,7 +24,7 @@ const mdsvexOptions = {
 			return `{@html \`${html}\` }`;
 		}
 	},
-	remarkPlugins: [[remarkToc, { tight: true }]],
+	remarkPlugins: [[remarkToc, { tight: true }], remarkEmbedder],
 	// remarkPlugins: [remarkUbwrapImages, [remarkToc, { tight: true }]],
 	rehypePlugins: [rehypeSlug]
 };

@@ -17,15 +17,17 @@
 	};
 </script>
 
-<div class="h-full w-full px-4 py-2 flex items-center justify-center">
-	<div class="mb-2 grid grid-cols-4 max-w-[80%] gap-4">
+<div class="flex h-full w-full items-center justify-center px-4 py-2">
+	<div class="mb-2 grid max-w-[80%] grid-cols-4 gap-4">
 		{#each getAllData() as item}
 			<a href={`blogs/${item.slug}`}>
 				<div class="bg-card">
-				<img alt={item.title} src={item.banner} />
-				<p class="cursor-pointer text-sm text-gray-400 hover:text-white">{item.title}</p>
-				<p class="cursor-pointer text-sm text-gray-400 hover:text-white">{item.description.slice(0, 25)}</p>
-			</div>
+					<img alt={item.title} src={item.banner} />
+					<div class="p-2">
+						<p class="cursor-pointer text-sm mb-2">{item.title}</p>
+						<p class="cursor-pointer text-xs text-muted">{item.description.slice(0, 25)}</p>
+					</div>
+				</div>
 			</a>
 		{/each}
 	</div>
