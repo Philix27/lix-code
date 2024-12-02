@@ -28,7 +28,7 @@ function main()  {
 ## Version 2 of me
 
 
-![](./assets/artemis.png)
+
 ![](https://www.youtube.com/watch?v=fA8QK69zwlw)
 
 [![IMAGE ALT TEXT](http://img.youtube.com/watch?v=tyDan_pFUHE/0.jpg)](https://www.youtube.com/watch?v=tyDan_pFUHE "Video Title")
