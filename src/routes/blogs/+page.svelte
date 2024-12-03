@@ -17,8 +17,8 @@
 	};
 </script>
 
-<div class="flex h-full w-full items-center justify-center px-4 py-2">
-	<div class="mb-2 grid max-w-[80%] grid-cols-4 gap-4">
+<div class="flex w-full items-center justify-center px-4 py-2">
+	<div class="mb-2 grid max-w-[94%] md:max-w-[80%] md:grid-cols-3 lg:grid-cols-4  gap-4 grid-cols-1">
 		{#each getAllData() as item}
 			<a href={`blogs/${item.slug}`}>
 				<div class="bg-card">

@@ -12,19 +12,21 @@
 </svelte:head>
 
 <div class="flex min-h-screen w-full justify-center">
-	<div class="h-ful flex w-full max-w-[80%] py-5">
-		<div class="flex flex-col items-center justify-center w-[200px]">
+	<div class="h-ful flex w-full max-w-full py-5 md:max-w-[80%]">
+		<div class="hidden w-[200px] flex-col items-center justify-center md:flex">
 			<hgroup class="flex flex-col gap-y-4 space-y-4">
 				<p class="text-sm">Published at {formatDate(data.meta.date)}</p>
 				<div>
 					{#each data.meta.categories as category}
-						<span class="surface-4 mx-2 rounded-full bg-primary px-2 py-1 text-xs">&num;{category}</span>
+						<span class="surface-4 bg-primary mx-2 rounded-full px-2 py-1 text-xs"
+							>&num;{category}</span
+						>
 					{/each}
 				</div>
 			</hgroup>
 		</div>
 
-		<div class="mx-auto overflow-y-scroll h-screen no-scrollbar w-[70%]">
+		<div class="no-scrollbar mx-auto h-screen w-full overflow-x-clip overflow-y-scroll md:w-[70%]">
 			<MarkDown>
 				<data.content />
 			</MarkDown>

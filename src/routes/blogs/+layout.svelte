@@ -3,10 +3,9 @@
 	import type { IBlog } from '$lib/types/blogs';
 
 	export let data;
-	export const prerender = true;
+	// export const prerender = true;
 </script>
 
-<div class="flex">
-	<!-- <Sidebar data={data.content as IBlog[]} /> -->
+<div class="no-scrollbar relative h-screen min-h-screen overflow-y-scroll">
 	<slot />
 </div>
